@@ -16,10 +16,12 @@ class TennisGame3: TennisGame {
     var score: String? {
         var score: String
         if (score1 < 4 && score2 < 4) && (score1 + score2 < 6) {
+            // FIXME: メソッドに切り出す？
             let point = ["Love", "Fifteen", "Thirty", "Forty"]
             score = point[score1]
             return (score1 == score2) ? "\(score)-All" : "\(score)-\(point[score2])"
         } else {
+            // FIXME: メソッドに切り出す？
             if (score1 == score2) {
                 return "Deuce"
             }
